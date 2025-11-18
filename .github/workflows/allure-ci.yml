@@ -30,12 +30,12 @@ jobs:
           name: allure-results
           path: target/allure-results
 
-  allure-report:
+   allure-report:
     name: Generate & Deploy Allure Report
     needs: tests
     runs-on: ubuntu-latest
     permissions:
-      contents: write    
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -50,8 +50,8 @@ jobs:
       - name: Generate Allure report
         uses: simple-elf/allure-report-action@v1.13
         with:
-          allure_results: allure-results
-          allure_report: target/allure-report
+          allure_results: target/allure-results  
+          allure_report: allure-report           
           keep_reports: 1
 
       - name: Deploy Allure report to GitHub Pages
@@ -60,3 +60,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-report
+          force_orphan: true
