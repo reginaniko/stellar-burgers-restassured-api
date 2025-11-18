@@ -29,14 +29,12 @@ public class BaseTest {
     UserRequest userRequest = new UserRequest(
             "autotest_" + runId + "@mail.test",
             faker.internet().password(),
-            faker.name().username()
-    );
+            faker.name().username());
 
     UserRequest updateUserRequestBody = new UserRequest(
             "autotest_update_" + runId + "@mail.test",
             faker.internet().password(),
-            faker.name().username()
-    );
+            faker.name().username());
 
     UserRequest noNameUserRequest = UserRequest.builder()
             .email("autotest_noname_" + runId + "@mail.test")
