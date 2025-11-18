@@ -4,12 +4,16 @@ import io.restassured.RestAssured;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
+import java.util.UUID;
 
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
     BaseHttpClient baseHttpClient = new BaseHttpClient();
     Faker faker = new Faker();
+    // Unique id per test run to avoid depending on global backend state
+    protected final String runId = UUID.randomUUID().toString().substring(0, 8);
+
     protected static final String BASE_URL = "https://stellarburgers.education-services.ru";
     protected static final String CREATE_USER_ENDPOINT = "/api/auth/register";
     protected static final String LOGIN_USER_ENDPOINT = "/api/auth/login";
@@ -23,39 +27,47 @@ public class BaseTest {
 
     // Test data
     UserRequest userRequest = new UserRequest(
-            faker.internet().emailAddress(),
+            "autotest_" + runId + "@mail.test",
             faker.internet().password(),
             faker.name().username()
     );
+
     UserRequest updateUserRequestBody = new UserRequest(
-            faker.internet().emailAddress(),
+            "autotest_update_" + runId + "@mail.test",
             faker.internet().password(),
             faker.name().username()
     );
+
     UserRequest noNameUserRequest = UserRequest.builder()
-            .email(faker.internet().emailAddress())
+            .email("autotest_noname_" + runId + "@mail.test")
             .password(faker.internet().password())
             .build();
+
     UserRequest noEmailUserRequest = UserRequest.builder()
             .password(faker.internet().password())
             .name(faker.name().username())
             .build();
+
     UserRequest noPasswordUserRequest = UserRequest.builder()
-            .email(faker.internet().emailAddress())
+            .email("autotest_nopass_" + runId + "@mail.test")
             .name(faker.name().username())
             .build();
+
     UserRequest loginUserRequest = UserRequest.builder()
             .email(userRequest.getEmail())
             .password(userRequest.getPassword())
             .build();
+
     UserRequest emptyLoginUserRequest = UserRequest.builder()
             .email("")
             .password("")
             .build();
+
     UserRequest noEmailLoginUserRequest = UserRequest.builder()
             .email("")
             .password(userRequest.getPassword())
             .build();
+
     UserRequest noPasswordLoginUserRequest = UserRequest.builder()
             .email(userRequest.getEmail())
             .password("")
