@@ -43,7 +43,6 @@ https://github.com/reginaniko/stellar-burgers
 - **JUnit4**
 - **AssertJ / Hamcrest**
 - **Lombok**
-- **GSON**
 - **Allure**
 - **Maven**
 - **Java Faker**
@@ -122,9 +121,10 @@ Workflow path:
 
 ## Author
 
-Regina Nikogosian — QA Automation Engineer
-USA
+Regina Nikogosian — QA Automation Engineer  
+USA  
 LinkedIn: https://www.linkedin.com/in/regina-nikogosian/
+
 
 
 
