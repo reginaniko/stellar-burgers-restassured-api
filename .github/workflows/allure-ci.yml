@@ -57,7 +57,14 @@ jobs:
           allure_report: ./allure-report        
           keep_reports: 1
 
+      - name: Upload Allure HTML report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report-html
+          path: ./allure-report
+
       - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./allure-report
@@ -66,6 +73,7 @@ jobs:
     name: Deploy to GitHub Pages
     needs: allure-report
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
