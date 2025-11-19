@@ -1,7 +1,7 @@
 # Stellar Burgers — API Automation Test Suite 
 ### REST Assured • JUnit4 • Allure • Java 17
 
-<p align="left"> <a href="https://github.com/reginaniko/stellar-burgers-restassured-api/actions"> <img src="https://github.com/reginaniko/stellar-burgers-restassured-api/actions/workflows/allure-ci.yml/badge.svg" alt="CI Status" /> </a> <a href="https://reginaniko.github.io/stellar-burgers-restassured-api/"> <img src="https://img.shields.io/badge/Allure-Report-passing-brightgreen?style=flat-square" /> </a> </p> <p align="left"> <img src="https://img.shields.io/badge/Language-Java%2017-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/Framework-Rest%20Assured-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Test%20Runner-JUnit4-brightgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/Reporting-Allure%202-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/Build-Maven-yellow?style=for-the-badge" /> <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF?style=for-the-badge" /> </p>
+<p align="left"> <a href="https://github.com/reginaniko/stellar-burgers-restassured-api/actions"> <img src="https://github.com/reginaniko/stellar-burgers-restassured-api/actions/workflows/allure-ci.yml/badge.svg" alt="CI Status" /> </a> <a href="https://reginaniko.github.io/stellar-burgers-restassured-api/"> </a> </p> <p align="left"> <img src="https://img.shields.io/badge/Language-Java%2017-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/Framework-Rest%20Assured-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Test%20Runner-JUnit4-brightgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/Reporting-Allure%202-purple?style=for-the-badge" /> <img src="https://img.shields.io/badge/Build-Maven-yellow?style=for-the-badge" /> <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF?style=for-the-badge" /> </p>
   
 ## Interactive Allure Report (GitHub Pages):
 https://reginaniko.github.io/stellar-burgers-restassured-api/
@@ -124,6 +124,7 @@ Workflow path:
 Regina Nikogosian — QA Automation Engineer  
 USA  
 LinkedIn: https://www.linkedin.com/in/regina-nikogosian/
+
 
 
 
